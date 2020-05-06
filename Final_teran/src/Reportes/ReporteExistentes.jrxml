@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0cc3e94f-fb4c-4ea3-8e98-391036ec7af8">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select * from multa]]>
+	</queryString>
+	<field name="id_multa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dni" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tipo_multa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="monto" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="correo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="punto" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fec_regi" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="55" splitType="Stretch">
+			<staticText>
+				<reportElement x="169" y="35" width="176" height="20" uuid="f9336b81-85fd-40ab-903b-2799e40a318c"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Multas en Base de Datos]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="-18" y="27" width="65" height="20" uuid="36658d7a-4b0c-486c-b10e-fd09a6881caf"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Número]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="47" y="27" width="92" height="20" uuid="7da6384e-28a1-41ff-9155-d0da45cefbb3"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DNI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="139" y="27" width="87" height="20" uuid="c3e28232-5ea4-44c2-a2d9-1e296126eb7d"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Multa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="226" y="27" width="69" height="20" uuid="5b61441e-432d-410c-b500-3da0a21cbd11"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Monto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="27" width="103" height="20" uuid="ce041cbb-2db9-45ad-9e94-27a353c68640"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mail]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="398" y="27" width="67" height="20" uuid="a7958780-0224-42c2-b233-1284b6c13e65"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Puntos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="465" y="27" width="102" height="20" uuid="7f5392c1-a068-4b08-a4cd-aadc25160498"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<textField>
+				<reportElement x="-18" y="0" width="65" height="20" uuid="9a1138f8-4299-4ee5-81a7-9000aeefd504"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{id_multa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="47" y="0" width="92" height="20" uuid="1e6cba42-f6e8-4e78-86b6-3c63f408cac5"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{dni}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="139" y="0" width="87" height="20" uuid="03ba6e48-2128-480d-8fe1-3b8aead6726b"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{tipo_multa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="226" y="0" width="69" height="20" uuid="81b803b1-de01-4de7-a8a0-195406f5493d"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{monto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="295" y="0" width="103" height="20" uuid="eedbbac1-a15d-417f-b5f7-5a29af6c8c72"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{correo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="398" y="0" width="67" height="20" uuid="6f0e07bd-f302-4647-866a-56e3d3704260"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{punto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="465" y="0" width="102" height="20" uuid="374c239b-67da-4a9f-af48-3b6b4c83d1e4"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{fec_regi}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
